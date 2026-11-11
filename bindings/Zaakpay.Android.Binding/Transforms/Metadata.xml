@@ -1,0 +1,5 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='com.mobikwik.mobikwikpglib.utils']/class[@name='DownloadImageTask']" />
+  <remove-node path="/api/package[@name='com.mobikwik.mobikwikpglib.utils']/class[@name='CustomDigitKeyListener']" />
+  <remove-node path="/api/package[@name='com.mobikwik.mobikwikpglib.lib']/class[@name='BankCode']" />
+</metadata>

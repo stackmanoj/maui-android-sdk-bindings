@@ -1,0 +1,6 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='com.facebook']/class[@name='GraphRequestAsyncTask']" />
+  <remove-node path="/api/package[@name='com.facebook']/class[@name='GraphRequestBatch']" />
+  <remove-node path="/api/package[@name='com.facebook.appevents.internal']/class[@name='FileDownloadTask']" />
+  <remove-node path="/api/package[@name='com.facebook']/class[@name='GraphRequestBatch']/method[@name='size' and count(parameter)=0]" />
+</metadata>

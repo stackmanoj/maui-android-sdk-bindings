@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--
+      Enable trim analyzers for Android class libraries.
+      To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+    -->
+    <IsTrimmable>true</IsTrimmable>
+    <Configurations>Debug;Release;DebugDevice</Configurations>
+    <!--
+      NOTE: you can simply add .aar or .jar files in this directory to be included in the project.
+      To learn more, see: https://learn.microsoft.com/dotnet/maui/migration/android-binding-projects
+    -->
+  </PropertyGroup>
+  <ItemGroup>
+    <!--<AndroidLibrary Update="Jars\android-sdk-1.7.30.aar">
+      --><!--Downloaded from https://maven.cashfree.com/release/com/cashfree/pg/android-sdk/1.7.30/android-sdk-1.7.30.aar--><!--
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>-->
+    <AndroidLibrary Update="Jars\analytics-1.0.19.aar">
+      <!--Downloaded aar from https://mvnrepository.com/artifact/com.cashfree.pg/analytics/1.0.19-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\api-2.2.8.aar">
+      <!--Downloaded from https://repo1.maven.org/maven2/com/cashfree/pg/api/2.2.8/api-2.2.8.aar-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\base-1.0.4.aar">
+      <!--Downloaded from https://repo1.maven.org/maven2/com/cashfree/pg/base/1.0.4/base-1.0.4.aar-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\core-2.2.8.aar">
+      <!--Downloaded from https://repo1.maven.org/maven2/com/cashfree/pg/core/2.2.8/core-2.2.8.aar-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\gridlayout-1.1.0.aar">
+      <!--Downloaded from arr https://mvnrepository.com/artifact/androidx.gridlayout/gridlayout/1.1.0-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\image-caching-1.0.8.aar">
+      <!--Downloaded aar from https://mvnrepository.com/artifact/com.cashfree.pg/image-caching/1.0.8-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\network-1.0.6.aar">
+      <!--Downloaded aar from https://mvnrepository.com/artifact/com.cashfree.pg/network/1.0.6-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\ui-2.2.8.aar">
+      <!--Downloaded aar from https://mvnrepository.com/artifact/com.cashfree.pg/ui/2.2.28-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <!--
+    <AndroidLibrary Update="Jars\ui-2.2.8.aar">
+      --><!--Downloaded from https://repo1.maven.org/maven2/com/cashfree/pg/ui/2.2.8/ui-2.2.8.aar--><!--
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>-->
+  </ItemGroup>
+</Project>

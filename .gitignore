@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.original
+
+# Vendor SDKs that are not redistributed here. Download them yourself (see each Jars/README.md).
+bindings/CCAvenue.Android.Binding/Jars/Maven/sdk-*.aar
+bindings/CCAvenue.Android.Binding/Jars/Maven/sdk-*.pom
+bindings/Zaakpay.Android.Binding/Jars/*.aar

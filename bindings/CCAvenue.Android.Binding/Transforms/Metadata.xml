@@ -1,0 +1,37 @@
+<metadata>
+  <!--
+    These SDK-internal RecyclerView adapters generate invalid C# overrides after
+    AndroidX binding. The Java classes remain inside the AAR for runtime use.
+  -->
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.adapters']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.databinding']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.di']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.di.module']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.fragments']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.network']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.network.repository']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.ui']" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk']/class[contains(@name, '_MembersInjector')]" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk']/class[implements[@name='android.os.Parcelable.Creator']]" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.model']/class[implements[@name='android.os.Parcelable.Creator']]" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.model.tappay']/class[implements[@name='android.os.Parcelable.Creator']]" />
+  <remove-node path="/api/package[@name='com.ccavenue.indiasdk.model']/class[@name='CCPayOptionDetail']/implements[@name='java.lang.Comparable']" />
+  <remove-node path="/api/package[@name='coil']" />
+  <remove-node path="/api/package[@name='coil.annotation']" />
+  <remove-node path="/api/package[@name='coil.decode']" />
+  <remove-node path="/api/package[@name='coil.disk']" />
+  <remove-node path="/api/package[@name='coil.drawable']" />
+  <remove-node path="/api/package[@name='coil.fetch']" />
+  <remove-node path="/api/package[@name='coil.intercept']" />
+  <remove-node path="/api/package[@name='coil.key']" />
+  <remove-node path="/api/package[@name='coil.map']" />
+  <remove-node path="/api/package[@name='coil.memory']" />
+  <remove-node path="/api/package[@name='coil.network']" />
+  <remove-node path="/api/package[@name='coil.request']" />
+  <remove-node path="/api/package[@name='coil.size']" />
+  <remove-node path="/api/package[@name='coil.target']" />
+  <remove-node path="/api/package[@name='coil.transform']" />
+  <remove-node path="/api/package[@name='coil.transition']" />
+  <remove-node path="/api/package[@name='coil.util']" />
+  <remove-node path="/api/package[@name='com.caverock.androidsvg']" />
+</metadata>

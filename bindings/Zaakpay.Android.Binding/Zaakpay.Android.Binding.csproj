@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--
+      Enable trim analyzers for Android class libraries.
+      To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+    -->
+    <IsTrimmable>true</IsTrimmable>
+    <Configurations>Debug;Release;DebugDevice</Configurations>
+    <!--
+      NOTE: you can simply add .aar or .jar files in this directory to be included in the project.
+      To learn more, see: https://learn.microsoft.com/dotnet/maui/migration/android-binding-projects
+    -->
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidLibrary Update="Jars\Mobikwik-Android-SDK-4.5.aar">
+      <!--
+      Download the AAR yourself (see Jars/README.md):
+      curl.exe -L -o Mobikwik-Android-SDK-4.5.aar "https://jitpack.io/com/github/Mobikwik/Android-SDK/4.5/Android-SDK-4.5.aar"-->
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+  </ItemGroup>
+</Project>

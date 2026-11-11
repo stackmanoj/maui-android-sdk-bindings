@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsTrimmable>true</IsTrimmable>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Scripts\**</DefaultItemExcludes>
+    <Configurations>Debug;Release;DebugDevice</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AndroidJavaSource Remove="Patches\**\*.java" />
+    <AndroidLibrary Update="Jars\Maven\sdk-2.1.4.aar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\Maven\Dependencies\artifacts\**\*.aar">
+      <Bind>false</Bind>
+    </AndroidLibrary>
+    <AndroidLibrary Update="Jars\Maven\Dependencies\artifacts\**\*.jar">
+      <Bind>false</Bind>
+    </AndroidLibrary>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.1.4" />
+    <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.36" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.2.1.3" />
+    <PackageReference Include="Xamarin.AndroidX.CoordinatorLayout" Version="1.3.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.9.3" />
+    <PackageReference Include="Xamarin.AndroidX.LocalBroadcastManager" Version="1.1.0.22" />
+    <PackageReference Include="Xamarin.AndroidX.Navigation.Fragment.Ktx" Version="2.9.2.1" />
+    <PackageReference Include="Xamarin.AndroidX.Navigation.UI.Ktx" Version="2.9.2.1" />
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.4.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.ViewPager" Version="1.1.0.7" />
+    <PackageReference Include="Xamarin.AndroidX.Work.Work.Runtime.Ktx" Version="2.9.0.4" />
+    <PackageReference Include="Xamarin.Android.ReactiveX.RxAndroid" Version="2.1.1.23" />
+    <PackageReference Include="Xamarin.Android.ReactiveX.RxJava" Version="2.2.21.30" />
+    <PackageReference Include="GoogleGson" Version="2.10.1.6" />
+    <PackageReference Include="Karamunting.Android.JonathanHedley.Jsoup" Version="1.12.2" />
+    <PackageReference Include="Square.OkHttp3" Version="4.12.0.4" ExcludeAssets="all" PrivateAssets="all" />
+    <PackageReference Include="Square.OkIO" Version="3.17.0.1" ExcludeAssets="all" PrivateAssets="all" />
+    <PackageReference Include="Square.OkIO.JVM" Version="3.17.0.1" ExcludeAssets="all" PrivateAssets="all" />
+    <PackageReference Include="Square.Retrofit2" Version="2.9.0.8" />
+    <PackageReference Include="Square.Retrofit2.ConverterGson" Version="2.9.0.8" />
+    <PackageReference Include="Square.Retrofit2.ConverterScalars" Version="2.9.0.8" />
+    <PackageReference Include="Xamarin.AirBnB.Android.Lottie" Version="6.7.1.2" />
+    <PackageReference Include="Xamarin.AndroidX.DataBinding.ViewBinding" Version="8.13.2.1" />
+    <PackageReference Include="Xamarin.Google.Dagger" Version="2.46.1" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.12.0.5" />
+  </ItemGroup>
+</Project>

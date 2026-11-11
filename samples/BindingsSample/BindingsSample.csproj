@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BindingsSample</RootNamespace>
+    <SupportedOSPlatformVersion>29.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ApplicationId>com.example.bindingssample</ApplicationId>
+    <ApplicationTitle>Bindings Sample</ApplicationTitle>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+  </PropertyGroup>
+
+  <!--
+    CCAvenue integration requirement.
+    The CCAvenue SDK bundles OkHttp 5.x / Okio 3.16 as raw Java jars (inside the binding).
+    The managed Retrofit binding still needs the Square.OkHttp3 assembly, so the app adds the
+    NuGet package, and the target below removes the NuGet Java AARs so the two OkHttp
+    versions do not collide at the Java level.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Square.OkHttp3" Version="4.12.0.4" />
+  </ItemGroup>
+
+  <Target Name="RemoveDuplicateOkHttpAars" BeforeTargets="_ResolveLibraryProjectImports">
+    <ItemGroup>
+      <AndroidAarLibrary Remove="$(NuGetPackageRoot)square.okhttp3\*\lib\**\Square.OkHttp3.aar" />
+      <AndroidAarLibrary Remove="$(NuGetPackageRoot)square.okio\*\lib\**\Square.OkIO.aar" />
+      <AndroidAarLibrary Remove="$(NuGetPackageRoot)square.okio.jvm\*\lib\**\Square.OkIO.JVM.aar" />
+      <AndroidLibrary Remove="$(NuGetPackageRoot)square.okhttp3\*\lib\**\Square.OkHttp3.aar" />
+      <AndroidLibrary Remove="$(NuGetPackageRoot)square.okio\*\lib\**\Square.OkIO.aar" />
+      <AndroidLibrary Remove="$(NuGetPackageRoot)square.okio.jvm\*\lib\**\Square.OkIO.JVM.aar" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\bindings\CCAvenue.Android.Binding\CCAvenue.Android.Binding.csproj" />
+    <ProjectReference Include="..\..\bindings\Zaakpay.Android.Binding\Zaakpay.Android.Binding.csproj" />
+    <ProjectReference Include="..\..\bindings\Cashfree.Android.Binding\Cashfree.Android.Binding.csproj" />
+    <ProjectReference Include="..\..\bindings\Facebook.Android.Binding\Facebook.Android.Binding.csproj" />
+  </ItemGroup>
+
+</Project>

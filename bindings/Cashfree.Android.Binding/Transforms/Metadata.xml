@@ -1,0 +1,11 @@
+﻿<metadata>
+  <remove-node path="/api/package[@name='com.cashfree.pg.core.hidden.nfc.parser.apdu.annotation']/class[@name='AnnotationData']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.ui.hidden.nfc.parser.apdu.annotation']/class[@name='AnnotationData']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.core.api.channel']/class[@name='CFCallbackEventBus']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.core.api.channel']/class[@name='CFCallbackApiEventBus']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.ui.hidden.channel']/class[@name='CFNativeCallbackEventBus']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.core.api.channel']/class[@name='CFSubscriptionEventBus']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.ui.hidden.activity.base']/class[@name='LifecycleObserverBus']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.core.hidden.network']" />
+  <remove-node path="/api/package[@name='com.cashfree.pg.analytics.analytics']/class[@name='SDKLogRequest']" />
+</metadata>

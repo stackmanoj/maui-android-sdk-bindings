@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Bindings Sample</string>
+  <!-- Placeholders. Use the values from your own Facebook developer app. -->
+  <string name="facebook_app_id">0000000000000000</string>
+  <string name="facebook_client_token">00000000000000000000000000000000</string>
+</resources>
