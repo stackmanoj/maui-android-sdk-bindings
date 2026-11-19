@@ -1,6 +1,8 @@
 # maui-android-sdk-bindings
 
-.NET MAUI / .NET for Android binding libraries for native Android SDKs, targeting `net10.0-android`.
+.NET MAUI / .NET for Android binding libraries for native Android SDKs, targeting `net10.0-android`. Use the Cashfree, Zaakpay (Mobikwik), CCAvenue and Facebook Android SDKs from C# in your .NET MAUI app, with no Java or Kotlin wrapper code to write.
+
+Keywords: .NET MAUI, Android binding library, payment gateway, Cashfree, Zaakpay, Mobikwik, CCAvenue, Facebook SDK, Xamarin.Android migration.
 
 | Binding | Wraps | Official SDK source |
 |---|---|---|
@@ -34,3 +36,7 @@ Each binding's `Jars/README.md` gives exact file names, versions and official do
 ## Status
 
 Android only. All four bindings and the sample app build on .NET 10 (`net10.0-android`); the sample has not been run against live merchant accounts. Payment SDKs change often, so check the SDK version each binding was built against before relying on it. Not affiliated with or endorsed by CCAvenue, Mobikwik/Zaakpay, Cashfree or Meta.
+
+## License
+
+The binding code and sample app in this repository are released under the [MIT License](LICENSE). The vendor SDK files and their dependencies belong to their respective owners and keep their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
